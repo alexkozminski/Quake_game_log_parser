@@ -1,0 +1,23 @@
+{
+  "name": "quake_game_log_parser",
+  "version": "1.0.0",
+  "description": "log parser",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "nodejs",
+    "git",
+    "game",
+    "parser"
+  ],
+  "author": "alexkozminski",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
