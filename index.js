@@ -37,8 +37,7 @@ function parseGame(logs) {
     const logsArr = logs.split("\n")
     const length = logsArr.length
     let initiated = false
-    console.log('logs length', logsArr.length)
-    // iterate rows
+    
     for (let i = 0; i < length; i++) {
         const row = logsArr[i]
 
@@ -62,7 +61,9 @@ function parseGame(logs) {
             const winner = getWinner(cols)
             const loser = getLoser(cols)
 
-            players.add(winner)
+            if (winner.indexOf('<world>') === -1)
+                players.add(winner)
+            
             players.add(loser)
 
             if (winner.indexOf('<world>') > -1) {
@@ -84,7 +85,6 @@ function main() {
             return
         }
 
-        // console.log(data)
         parseGame(data)
         console.log(JSON.stringify(result))
     })
